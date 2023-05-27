@@ -1,0 +1,42 @@
+
+.footer {
+    
+    ul{
+        padding-left: 0px;
+        font-size: 1rem;
+    }
+    li{
+        list-style: none;
+        font-size: 0.8rem;
+    }
+    .links{
+        li{
+            padding: 5px;
+            margin-top: 4px;
+        }
+    }
+    .footname{
+        li{
+            margin-top: 16px;
+        }
+    }
+    
+     @media (max-width:991px){
+        ul{
+            text-align: center;
+        };
+        .row{
+            div{
+                padding: 30px;
+                text-align: center;
+            }
+        }
+        .logoo{
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+       
+    }
+}
+
+
