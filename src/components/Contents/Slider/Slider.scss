@@ -17,9 +17,50 @@
     background-image: url('../../../assets/images/slide6.jpg');
 }
 
+
+
+.women{
+    color: red;
+    text-shadow: 1px 2px 2px gray;
+}
+.offer{
+    text-shadow: 1pc solid black;
+}
+.menFashion{
+    .men{
+        color: red;
+        text-shadow: 1px 2px 2px yellow;
+    }
+}
+.children{
+    color: white;
+    text-shadow: 1px 2px 2px black;
+    
+}
+
+.button{
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: 1px solid grey;
+    font-weight: bold;
+    // z-index: 1;
+    &:hover{
+        background-color: rgb(176, 23, 23);
+        // color: red;
+    }
+}
+
+
 .carousel-image{
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+@media (max-width:778px){
+    .content{
+        text-align: center;
+    }
 }

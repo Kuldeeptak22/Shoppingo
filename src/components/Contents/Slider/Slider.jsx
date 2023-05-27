@@ -1,8 +1,5 @@
 import React from "react";
 import "./Slider.scss";
-// import slide1 from "../../../assets/images/slide1.jpg";
-// import slide2 from "../../../assets/images/slide2.jpg";
-// import slide3 from "../../../assets/images/slide3.jpg";
 
 const Slider = () => {
   return (
@@ -10,7 +7,7 @@ const Slider = () => {
       <div
         id="carouselExampleIndicators"
         class="carousel slide carousel-fade"
-        // data-bs-ride="true"
+        data-bs-ride="true"
       >
         <div class="carousel-indicators">
           <button
@@ -55,33 +52,45 @@ const Slider = () => {
         <div class="carousel-inner">
           <div
             class="carousel-item carousel-image bg-img-1 active"
-            // data-bs-interval="2000"
+            data-bs-interval="2000"
           >
-            <div>
-              <p>50% OFF</p>
-              <h1>WOMEN FASHION</h1>
-              <button>SHOP NOW</button>
+            <div className="mx-5 my-4 content">
+              <p className="fs-3">50% OFF </p>
+              <h1 className="women">WOMEN FASHION</h1>
+              <button className="button mx-5">SHOP NOW</button>
             </div>
           </div>
           <div
             class="carousel-item carousel-image bg-img-2"
-            // data-bs-interval="2000"
-          ></div>
+            data-bs-interval="2000"
+          >
+            <div className="mx-5 my-4 content menFashion">
+              <p className="fs-3 mx-5 text-white offer">70% OFF</p>
+              <h1 className="men">MEN FASHION</h1>
+              <button className="button mx-5">SHOP NOW</button>
+            </div>
+          </div>
           <div
             class="carousel-item carousel-image bg-img-3"
-            // data-bs-interval="2000"
+            data-bs-interval="2000"
           ></div>
           <div
             class="carousel-item carousel-image bg-img-4"
-            // data-bs-interval="2000"
+            data-bs-interval="2000"
           ></div>
           <div
             class="carousel-item carousel-image bg-img-5"
-            // data-bs-interval="2000"
-          ></div>
+            data-bs-interval="2000"
+          >
+            <div className="mx-5 my-4 content menFashion">
+              <p className="fs-3 mx-5 text-white offer">90% OFF</p>
+              <h1 className="children">CHILDREN FASHION</h1>
+              <button className="button mx-5">SHOP NOW</button>
+            </div>
+          </div>
           <div
             class="carousel-item carousel-image bg-img-6"
-            // data-bs-interval="2000"
+            data-bs-interval="2000"
           ></div>
         </div>
         <button
