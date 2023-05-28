@@ -11,6 +11,9 @@
             font-weight: 600;
         }
     }
+    .main{
+        display: flex;
+    }
 }
 .shoppingo{
     font-family: 'Noto Serif', serif;
@@ -53,4 +56,15 @@
         }
     }
 }
- 
+@media (max-width:200px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        .shoppingo{
+            font-size: 1.5rem;
+        }
+    }
+}

@@ -57,7 +57,7 @@ const Slider = () => {
             <div className="mx-5 my-4 content">
               <p className="fs-3">50% OFF </p>
               <h1 className="women">WOMEN FASHION</h1>
-              <button className="button mx-5">SHOP NOW</button>
+              <button className="button mx-md-5">SHOP NOW</button>
             </div>
           </div>
           <div

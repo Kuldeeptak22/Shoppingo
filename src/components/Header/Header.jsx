@@ -10,7 +10,7 @@ const Header = () => {
         data-bs-theme="dark"
       >
         <div className="container-fluid">
-          <a className="navbar-brand " href="#">
+          <a className="navbar-brand main wrap" href="#">
             <img src={mainLogo} alt="logo" width="40px" />
             <span className="shoppingo fw-bold mx-2 ">Shoppingo</span>
           </a>

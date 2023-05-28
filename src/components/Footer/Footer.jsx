@@ -96,14 +96,14 @@ const Footer = () => {
               </span>
               <span className="mx-2">
                 Om Bhawan, Amli Road,
-                <span className="mx-3">Pindwara, Sirohi, Raj. 307022</span>
+                <span className="mx-3 wrap">Pindwara, Sirohi, Raj. 307022</span>
               </span>
             </li>
             <li className="d-lg-flex">
               <span>
                 <FontAwesomeIcon icon={faEnvelope} />
               </span>
-              <span className="mx-2">kuldeeptak2211@gmail.com</span>
+              <span className="mx-2 wrap">kuldeeptak2211@gmail.com</span>
             </li>
             <li className="d-lg-flex">
               <span>
