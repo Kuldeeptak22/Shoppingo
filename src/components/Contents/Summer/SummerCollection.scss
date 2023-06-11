@@ -1,0 +1,18 @@
+.summer{
+    background-color: rgba(250, 239, 239, 0.813);
+    box-shadow: 2px 2px 5px 6px rgba(215, 210, 210, 0.813);
+    .sum{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .summerfeat{
+            margin: 10rem 0rem;
+        }
+    }
+    
+}
+@media (max-width:768px){
+    .sum{
+        text-align: center;
+    }
+}

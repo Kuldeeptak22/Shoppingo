@@ -1,0 +1,28 @@
+
+.exclusive{
+    .listgroup{
+       a{
+            &:hover{
+                color: red !important;
+            }
+        }  
+    }
+    .cardImage{
+        &:hover{
+            border: 2px solid brown;
+            transform: scale(110%);
+            transition: 700ms;
+            box-shadow: 2px 3px 6px 4px rgba(177, 176, 176, 0.662);
+        }
+    }
+}
+@media (max-width:992px){
+    .exe{
+        margin: 7rem 0 !important;    
+    }
+}
+@media (max-width:576px){
+    .card{
+        text-align: center;
+    }
+}

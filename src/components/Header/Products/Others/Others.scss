@@ -1,0 +1,35 @@
+
+.others{
+    border-bottom: 3px solid purple;
+}
+.other{
+    box-shadow: 1px 2px 4px 1px rgba(190, 188, 188, 0.785);
+    .category{
+        &:hover{
+            border-bottom: 3px solid purple;
+            transition: 300ms;
+        }
+    }
+}
+
+.cardImage{
+    &:hover{
+        border: 2px solid red;
+        transform: scale(105%);
+        transition: 300ms;
+        box-shadow: 1px 2px 4px 1px rgba(128, 128, 128, 0.785);
+    }
+    .detail{
+        cursor: pointer;
+    }
+}
+.cateList li{
+    list-style: none;
+    &:hover{
+        background-color: rgb(206, 205, 205);
+        cursor: pointer;
+    }
+}
+.cardBox{
+    box-shadow: 1px 1px 3px 1px rgb(189, 186, 186);
+}

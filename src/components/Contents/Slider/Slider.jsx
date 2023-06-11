@@ -6,15 +6,15 @@ const Slider = () => {
     <>
       <div
         id="carouselExampleIndicators"
-        class="carousel slide carousel-fade"
+        className="carousel slide carousel-fade"
         data-bs-ride="true"
       >
-        <div class="carousel-indicators">
+        <div className="carousel-indicators">
           <button
             type="button"
             data-bs-target="#carouselExampleIndicators"
             data-bs-slide-to="0"
-            class="active"
+            className="active"
             aria-current="true"
             aria-label="Slide 1"
           ></button>
@@ -49,9 +49,9 @@ const Slider = () => {
             aria-label="Slide 6"
           ></button>
         </div>
-        <div class="carousel-inner">
+        <div className="carousel-inner">
           <div
-            class="carousel-item carousel-image bg-img-1 active"
+            className="carousel-item carousel-image bg-img-1 active"
             data-bs-interval="2000"
           >
             <div className="mx-5 my-4 content">
@@ -61,7 +61,7 @@ const Slider = () => {
             </div>
           </div>
           <div
-            class="carousel-item carousel-image bg-img-2"
+            className="carousel-item carousel-image bg-img-2"
             data-bs-interval="2000"
           >
             <div className="mx-5 my-4 content menFashion">
@@ -71,15 +71,15 @@ const Slider = () => {
             </div>
           </div>
           <div
-            class="carousel-item carousel-image bg-img-3"
+            className="carousel-item carousel-image bg-img-3"
             data-bs-interval="2000"
           ></div>
           <div
-            class="carousel-item carousel-image bg-img-4"
+            className="carousel-item carousel-image bg-img-4"
             data-bs-interval="2000"
           ></div>
           <div
-            class="carousel-item carousel-image bg-img-5"
+            className="carousel-item carousel-image bg-img-5"
             data-bs-interval="2000"
           >
             <div className="mx-5 my-4 content menFashion">
@@ -89,27 +89,33 @@ const Slider = () => {
             </div>
           </div>
           <div
-            class="carousel-item carousel-image bg-img-6"
+            className="carousel-item carousel-image bg-img-6"
             data-bs-interval="2000"
           ></div>
         </div>
         <button
-          class="carousel-control-prev"
+          className="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next"
+          className="carousel-control-next"
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="visually-hidden">Next</span>
         </button>
       </div>
     </>

@@ -1,0 +1,23 @@
+.wrapper{
+  margin: 5rem 0;
+  -webkit-box-shadow: 0px 21px 41px -13px rgba(13, 11, 11, 0.395);
+  -moz-box-shadow: 0px 21px 41px -13px rgba(15, 13, 13, 0.406);
+  box-shadow: 0px 21px 41px -13px rgba(27, 22, 22, 0.413);
+  .inputFields{
+    background-image: linear-gradient(to bottom right, red, yellow);
+    ;
+  }
+  a{
+    text-decoration: none;
+    color: grey;
+    font-size: 0.9rem;
+  }
+  .add{
+    font-size: 0.9rem;
+  }
+}
+@media (max-width:260px){
+  .button{
+    font-size: 0.6rem;
+  }
+}

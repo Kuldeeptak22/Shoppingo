@@ -1,8 +1,44 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import cart from "../../assets/images/cart.png";
 import mainLogo from "../../assets/images/mainLogo.png";
 import "./Header.scss";
 const Header = () => {
+  const dropit1 = () => {
+    let drop = document.getElementById("dropit");
+    let dropdown = document.getElementById("dropdownId");
+    drop.classList.add("show");
+    dropdown.classList.add("show");
+  };
+  const dropOut1 = () => {
+    let drop = document.getElementById("dropit");
+    let dropdown = document.getElementById("dropdownId");
+    drop.classList.remove("show");
+    dropdown.classList.remove("show");
+  };
+  const dropit2 = () => {
+    let shopId = document.getElementById("shopId");
+    let shopId2 = document.getElementById("shopId2");
+    shopId.classList.add("show");
+    shopId2.classList.add("show");
+  };
+  const dropOut2 = () => {
+    let shopId = document.getElementById("shopId");
+    let shopId2 = document.getElementById("shopId2");
+    shopId.classList.remove("show");
+    shopId2.classList.remove("show");
+  };
+
+  // const navItems = () => {
+  // let navItem1 = document.getElementsByClassName("hello");
+  // let navItem1 = document.getElementsByClassName("navbar-toggler");
+  // if (navItem1.classList === "collapsed") {
+  //   navItem1.classList.remove("collapsed");
+  // } else {
+  //   navItem1.classList.add("collapsed");
+  // }
+  // };
+
   return (
     <>
       <nav
@@ -10,10 +46,10 @@ const Header = () => {
         data-bs-theme="dark"
       >
         <div className="container-fluid">
-          <a className="navbar-brand main wrap" href="#">
+          <Link to="/" className="navbar-brand main wrap" href="#">
             <img src={mainLogo} alt="logo" width="40px" />
             <span className="shoppingo fw-bold mx-2 ">Shoppingo</span>
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -30,85 +66,106 @@ const Header = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 listing">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+              <li className="nav-item ">
+                <Link to="/" className="nav-link" href="#">
                   HOME
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
+                <Link
+                  to="/products"
+                  className="nav-link dropdown-toggle showing"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  onMouseEnter={dropit1}
+                  onMouseLeave={dropOut1}
+                  id="dropit"
                 >
                   PRODUCTS
-                </a>
-                <ul className="dropdown-menu">
+                </Link>
+                <ul
+                  className="dropdown-menu"
+                  id="dropdownId"
+                  onMouseEnter={dropit1}
+                  onMouseLeave={dropOut1}
+                >
                   <li>
-                    <a className="dropdown-item" href="#">
-                      WOMAN'S
-                    </a>
+                    <Link to="/women" className="dropdown-item " href="#">
+                      Women's
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      MEN'S
-                    </a>
+                    <Link to="/men" className="dropdown-item " href="#">
+                      Men's
+                    </Link>
                   </li>
                   <li>
-                    <hr className="dropdown-divider" />
+                    <Link to="/kids" className="dropdown-item" href="#">
+                      Kid's
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      KID'S
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      ACCESSORIES
-                    </a>
+                    <Link to="/others" className="dropdown-item" href="#">
+                      Others
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item dropdown">
-                <a
+                <Link
                   className="nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
+                  id="shopId"
+                  onMouseEnter={dropit2}
+                  onMouseLeave={dropOut2}
                 >
                   SHOP
-                </a>
-                <ul className="dropdown-menu">
+                </Link>
+                <ul
+                  className="dropdown-menu"
+                  id="shopId2"
+                  onMouseEnter={dropit2}
+                  onMouseLeave={dropOut2}
+                >
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
+                    <Link to="/myaccount" className="dropdown-item" href="#">
+                      My Account
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
+                    <Link to="/wishlist" className="dropdown-item" href="#">
+                      Wish List
+                    </Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item disabled" href="#">
                       Something else here
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link">BLOG</a>
+                <Link to="/blog" className="nav-link">
+                  BLOG
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link " aria-current="page" href="#">
+                <Link
+                  to="/contactus"
+                  className="nav-link "
+                  aria-current="page"
+                  href="#"
+                >
                   CONTACT US
-                </a>
+                </Link>
               </li>
             </ul>
             {/* <form className="d-flex " role="search">

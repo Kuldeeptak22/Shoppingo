@@ -1,27 +1,35 @@
 
 
 .features{
-    .shop{
-        &:hover{
-            padding-bottom: 5px;
-            transform: scale(105%);
-            transition: 400ms;
-        }
-    }
+    margin: 10rem 10rem;
     .shopNow{
         &:hover{
             text-decoration: underline;
             font-weight: bold;
             cursor: pointer;
             color: darkblue !important;
+            text-shadow: 1px 2px 4px rgb(65, 58, 194);
         }
     }
     .feature1{
         background-color: #FFDBDF;
-        
+        &:hover{
+            .shop{
+                padding-bottom: 5px;
+                transform: scale(105%);
+                transition: 400ms;
+            }   
+        } 
     }
     .feature2{
         background-color: #D6F7FE;
+        &:hover{
+            .shop{
+                padding-bottom: 5px;
+                transform: scale(105%);
+                transition: 400ms;
+            }   
+        } 
         
     }
     .card-img-top {
