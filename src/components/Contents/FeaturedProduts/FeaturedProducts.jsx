@@ -1,25 +1,22 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import "./FeaturedProducts.scss";
+import { fetchData } from "../../../Redux/Actions/Actions";
 
 const FeaturedProducts = () => {
-  const [userData, setUserData] = useState([]);
+  // const [userData, setUserData] = useState([]);
+  const products = useSelector((state) => state.allProducts.allData);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then((res) => setUserData(res.data))
-      .catch((error) => console.log(error))
-      .finally(() => {
-        return;
-      });
+    dispatch(fetchData());
   }, []);
 
   const filterDetails =
-    userData &&
-    userData
+    products &&
+    products
       .filter((data) => {
         if (data.category.includes("men's clothing")) {
           return data.category.includes("men's clothing");

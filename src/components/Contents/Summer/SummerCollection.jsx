@@ -1,7 +1,7 @@
 import React from "react";
 import "./SummerCollection.scss";
-import summerLady from "../../../assets/images/summerLady.png";
 import summerMale from "../../../assets/images/summerMale.png";
+import { Link } from "react-router-dom";
 
 const SummerCollection = () => {
   return (
@@ -22,7 +22,9 @@ const SummerCollection = () => {
               <p>Sale Get up to 50% Off</p>
             </div>
             <div className="col-12">
-              <button className="button">Shop Now</button>
+              <Link to={"/others"}>
+                <button className="button">Shop Now</button>
+              </Link>
             </div>
           </div>
         </div>

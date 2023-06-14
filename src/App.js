@@ -13,6 +13,7 @@ import Myaccount from "./components/Header/Shop/Myaccount/Myaccount";
 import Wishlist from "./components/Header/Shop/Wishlist/Wishlist";
 import PageNotFound from "./components/PagenotFound/PageNotFound";
 import Others from "./components/Header/Products/Others/Others";
+import SingleProduct from "./components/Header/Products/SingleProduct/SingleProduct";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/myaccount" element={<Myaccount />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/others" element={<Others />} />
+          <Route path="/product/:productId" element={<SingleProduct />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />

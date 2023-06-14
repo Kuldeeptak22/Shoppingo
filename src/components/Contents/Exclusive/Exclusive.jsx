@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "./Exclusive.scss";
-import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchProducts } from "../../../Redux/Actions/Actions";
 
 const Exclusive = () => {
-  const [userData, setUserData] = useState([]);
+  const products = useSelector((state) => state.allProducts.allData);
+
+  const dispatch = useDispatch();
+  // const [userData, setUserData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then((res) => setUserData(res.data))
-      .catch((error) => console.log(error))
-      .finally(() => {
-        return;
-      });
+    dispatch(fetchProducts());
   }, []);
 
   const filterDetails =
-    userData &&
-    userData
+    products &&
+    products
       .filter((data) => {
         if (data.category.includes("jewelery")) {
           return data.category.includes("jewelery");
@@ -27,6 +25,7 @@ const Exclusive = () => {
       })
       .map((filteredData) => {
         const { id, title, image, price, rating } = filteredData;
+        console.log("filter", filteredData);
         return (
           <div
             className="col-lg-3 col-md-4 col-sm-6 col-12 my-5 mx-auto"

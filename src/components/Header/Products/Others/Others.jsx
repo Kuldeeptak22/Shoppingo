@@ -1,75 +1,63 @@
 import React, { useState, useEffect } from "react";
 import "./Others.scss";
-import axios from "axios";
+import { useSelector, useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
+import { fetchData } from "../../../../Redux/Actions/Actions";
+import { Link } from "react-router-dom";
 
 const Others = () => {
-  const [userData, setUserData] = useState([]);
+  // const [userData, setUserData] = useState([]);
+  const products = useSelector((state) => state.allProducts.products);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    axios
-      .get("https://dummyjson.com/products")
-      .then((res) => setUserData(res.data.products))
-      .catch((error) => console.log(error))
-      .finally(() => {
-        return;
-      });
+    dispatch(fetchData());
   }, []);
 
   const filterDetails =
-    userData &&
-    userData.slice(0, 30).map((data) => {
-      const {
-        category,
-        price,
-        title,
-        id,
-        rating,
-        stock,
-        thumbnail,
-        brand,
-        discountPercentage,
-      } = data;
+    products &&
+    products.slice(0, 30).map((data, index) => {
+      const { price, title, id, rating, thumbnail, brand, discountPercentage } =
+        data;
       return (
         <div
           className="col-lg-4 col-md-6 col-sm-6 col-12 my-5 mx-auto"
-          key={id}
+          key={index}
         >
-          <div className="mx-auto card h-100 cardImage">
-            <img
-              src={thumbnail}
-              className="card-img-top mx-auto detail"
-              alt={title}
-            />
-            <div className="card-body">
-              <FontAwesomeIcon className="text-warning" icon={faStar} />
-              <FontAwesomeIcon className="text-warning" icon={faStar} />
-              <FontAwesomeIcon className="text-warning" icon={faStar} />
-              <FontAwesomeIcon
-                className="text-warning"
-                icon={faStarHalfStroke}
+          <Link to={`/product/${id}`}>
+            <div className="mx-auto card h-100 cardImage">
+              <img
+                src={thumbnail}
+                className="card-img-top mx-auto detail"
+                alt={title}
               />
-              <span className="mx-2">({rating})</span>
-              <p className="card-text text-danger">{discountPercentage}% OFF</p>
-              <p className="card-title fw-bold">{title}</p>
-              <span className="card-text text-white  bg-success rounded px-2">
-                ${price}
-              </span>
-              <span className="card-text mx-1 text-secondary">
-                <s>${price + 100}</s>
-              </span>
-              <br />
-              Category:{" "}
-              <p className="card-text text-secondary d-inline fw-normal">
-                {category}
-              </p>
-              <br />
-              Brand:
-              <p className="card-text text-secondary d-inline"> {brand}</p>
+              <div className="card-body">
+                <FontAwesomeIcon className="text-warning" icon={faStar} />
+                <FontAwesomeIcon className="text-warning" icon={faStar} />
+                <FontAwesomeIcon className="text-warning" icon={faStar} />
+                <FontAwesomeIcon
+                  className="text-warning"
+                  icon={faStarHalfStroke}
+                />
+                <span className="mx-2">({rating})</span>
+                <p className="card-text text-danger">
+                  {discountPercentage}% OFF
+                </p>
+                <p className="card-title fw-bold">{title}</p>
+                <span className="card-text text-white  bg-success rounded px-2">
+                  ${price}
+                </span>
+                <span className="card-text mx-1 text-secondary">
+                  <s>${price + 100}</s>
+                </span>
+                <br />
+                Brand:
+                <p className="card-text text-secondary d-inline"> {brand}</p>
+              </div>
+              <div className="btn btn-primary w-50 mx-4 mb-3">Add to Cart</div>
             </div>
-            <div className="btn btn-primary w-50 mx-4 mb-3">Add to Cart</div>
-          </div>
+          </Link>
         </div>
       );
     });
@@ -77,7 +65,7 @@ const Others = () => {
     <>
       <div className="row mx-auto">
         <p className="fs-1 fw-bold others">Others</p>
-        <div className="col-md-4 bg-body-tertiary other my-5">
+        <div className="col-md-4 other my-5">
           <p className="fs-4 my-5 fw-bold category">Categories</p>
           <div className="row">
             <div className="col-12">
@@ -91,7 +79,7 @@ const Others = () => {
                   />
                   <label
                     className="form-check-label stretched-link mx-2"
-                    for="firstCheckboxStretched"
+                    htmlFor="firstCheckboxStretched"
                   >
                     Laptops
                   </label>
@@ -105,7 +93,7 @@ const Others = () => {
                   />
                   <label
                     className="form-check-label stretched-link mx-2"
-                    for="secondCheckboxStretched"
+                    htmlFor="secondCheckboxStretched"
                   >
                     Perfumes
                   </label>
@@ -119,7 +107,7 @@ const Others = () => {
                   />
                   <label
                     className="form-check-label stretched-link mx-2"
-                    for="thirdCheckboxStretched"
+                    htmlFor="thirdCheckboxStretched"
                   >
                     Cosmatics
                   </label>
@@ -133,7 +121,7 @@ const Others = () => {
                   />
                   <label
                     className="form-check-label stretched-link mx-2"
-                    for="forthCheckboxStretched"
+                    htmlFor="forthCheckboxStretched"
                   >
                     Food
                   </label>
@@ -147,7 +135,7 @@ const Others = () => {
                   />
                   <label
                     className="form-check-label stretched-link mx-2"
-                    for="fifthCheckboxStretched"
+                    htmlFor="fifthCheckboxStretched"
                   >
                     Home Decor
                   </label>
