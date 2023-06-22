@@ -1,0 +1,19 @@
+.singleProduct{
+    padding: 2px 58px;
+    .source{
+        text-decoration: none;
+    }
+    .collapsed{
+        transition: 300ms !important;
+    }
+    .image{
+        border:1px solid black
+    }
+}
+
+@media (max-width:778px){
+    .singleProduct{
+        text-align: center;
+        padding: 2px 2px;
+    }
+}

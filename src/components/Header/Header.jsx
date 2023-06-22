@@ -29,23 +29,13 @@ const Header = () => {
     shopId2.classList.remove("show");
   };
 
-  // const navItems = () => {
-  // let navItem1 = document.getElementsByClassName("hello");
-  // let navItem1 = document.getElementsByClassName("navbar-toggler");
-  // if (navItem1.classList === "collapsed") {
-  //   navItem1.classList.remove("collapsed");
-  // } else {
-  //   navItem1.classList.add("collapsed");
-  // }
-  // };
-
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg bg-body-tertiary bg-dark"
+        className="navbar navbar-expand-lg bg-body-tertiary bg-dark position-fixed w-100"
         data-bs-theme="dark"
       >
-        <div className="container-fluid">
+        <div className="container-fluid ">
           <Link to="/" className="navbar-brand main wrap" href="#">
             <img src={mainLogo} alt="logo" width="40px" />
             <span className="shoppingo fw-bold mx-2 ">Shoppingo</span>
@@ -92,22 +82,17 @@ const Header = () => {
                   onMouseLeave={dropOut1}
                 >
                   <li>
-                    <Link to="/women" className="dropdown-item " href="#">
-                      Women's
+                    <Link to="/cloths" className="dropdown-item ">
+                      Cloths
                     </Link>
                   </li>
                   <li>
-                    <Link to="/men" className="dropdown-item " href="#">
-                      Men's
+                    <Link to="/food" className="dropdown-item">
+                      Food
                     </Link>
                   </li>
                   <li>
-                    <Link to="/kids" className="dropdown-item" href="#">
-                      Kid's
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/others" className="dropdown-item" href="#">
+                    <Link to="/others" className="dropdown-item">
                       Others
                     </Link>
                   </li>

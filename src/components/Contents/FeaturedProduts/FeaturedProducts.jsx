@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import "./FeaturedProducts.scss";
 import { fetchData } from "../../../Redux/Actions/Actions";
+import Stars from "../../Header/Products/Stars/Stars";
 
 const FeaturedProducts = () => {
   // const [userData, setUserData] = useState([]);
@@ -22,6 +23,7 @@ const FeaturedProducts = () => {
           return data.category.includes("men's clothing");
         }
       })
+      .slice(0, 4)
       .map((filteredData) => {
         const { id, title, image, price, rating } = filteredData;
         return (
@@ -44,14 +46,7 @@ const FeaturedProducts = () => {
                   <s>${price + 100}</s>
                 </span>
                 <br />
-                <FontAwesomeIcon className="text-warning" icon={faStar} />
-                <FontAwesomeIcon className="text-warning" icon={faStar} />
-                <FontAwesomeIcon className="text-warning" icon={faStar} />
-                <FontAwesomeIcon
-                  className="text-warning"
-                  icon={faStarHalfStroke}
-                />
-                <span>({rating.rate})</span>
+                <Stars stars={rating?.rate} reviews={rating?.count} />
               </div>
             </div>
           </div>

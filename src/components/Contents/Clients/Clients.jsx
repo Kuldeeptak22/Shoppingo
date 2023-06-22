@@ -12,7 +12,7 @@ const Clients = () => {
         <div className="col-12 mx-auto">
           <p className="fs-3 fw-bold">Our Client Say!</p>
         </div>
-        <div className="col-12">
+        <div className="col-12 pb-5">
           <div
             id="carouselExampleAutoplaying"
             className="carousel slide"
@@ -132,7 +132,7 @@ const Clients = () => {
               <span className="visually-hidden">Previous</span>
             </button>
             <button
-              className="carousel-control-next"
+              className="carousel-control-next "
               type="button"
               data-bs-target="#carouselExampleAutoplaying"
               data-bs-slide="next"

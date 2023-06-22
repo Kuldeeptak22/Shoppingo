@@ -1,5 +1,6 @@
 import React from "react";
 import "./Slider.scss";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   return (
@@ -57,7 +58,9 @@ const Slider = () => {
             <div className="mx-5 my-4 content">
               <p className="fs-3">50% OFF </p>
               <h1 className="women">WOMEN FASHION</h1>
-              <button className="button mx-md-5">SHOP NOW</button>
+              <Link to={"/cloths"}>
+                <button className="button mx-md-5">SHOP NOW</button>
+              </Link>
             </div>
           </div>
           <div
@@ -67,7 +70,9 @@ const Slider = () => {
             <div className="mx-5 my-4 content menFashion">
               <p className="fs-3 mx-5 text-white offer">70% OFF</p>
               <h1 className="men">MEN FASHION</h1>
-              <button className="button mx-5">SHOP NOW</button>
+              <Link to={"/cloths"}>
+                <button className="button mx-5">SHOP NOW</button>
+              </Link>
             </div>
           </div>
           <div
@@ -85,7 +90,9 @@ const Slider = () => {
             <div className="mx-5 my-4 content menFashion">
               <p className="fs-3 mx-5 text-white offer">90% OFF</p>
               <h1 className="children">CHILDREN FASHION</h1>
-              <button className="button mx-5">SHOP NOW</button>
+              <Link to={"/cloths"}>
+                <button className="button mx-5">SHOP NOW</button>
+              </Link>
             </div>
           </div>
           <div

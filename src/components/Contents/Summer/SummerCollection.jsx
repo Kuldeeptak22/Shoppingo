@@ -22,7 +22,7 @@ const SummerCollection = () => {
               <p>Sale Get up to 50% Off</p>
             </div>
             <div className="col-12">
-              <Link to={"/others"}>
+              <Link to={"/cloths"}>
                 <button className="button">Shop Now</button>
               </Link>
             </div>

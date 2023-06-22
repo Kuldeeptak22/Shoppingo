@@ -5,12 +5,6 @@
 .other{
     box-shadow: 1px 2px 4px 1px rgba(190, 188, 188, 0.785);
     background-color: rgb(226, 223, 223);
-    .category{
-        &:hover{
-            border-bottom: 3px solid purple;
-            transition: 300ms;
-        }
-    }
 }
 
 .cardImage{
@@ -33,4 +27,7 @@
 }
 .cardBox{
     box-shadow: 1px 1px 3px 1px rgb(189, 186, 186);
+    .link{
+        text-decoration: none;
+    }
 }

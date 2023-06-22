@@ -36,7 +36,7 @@ const Services = () => {
             icon={faHeadset}
             className="fs-1 text-secondary my-2"
           />
-          <h5>27/4 Support</h5>
+          <h5>24/7 Support</h5>
           <p>
             If you are going to use of Lorem, you need to be sure there anything
           </p>

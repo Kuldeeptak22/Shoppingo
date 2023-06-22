@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Exclusive.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from "../../../Redux/Actions/Actions";
+import Stars from "../../Header/Products/Stars/Stars";
 
 const Exclusive = () => {
   const products = useSelector((state) => state.allProducts.allData);
@@ -25,7 +24,6 @@ const Exclusive = () => {
       })
       .map((filteredData) => {
         const { id, title, image, price, rating } = filteredData;
-        console.log("filter", filteredData);
         return (
           <div
             className="col-lg-3 col-md-4 col-sm-6 col-12 my-5 mx-auto"
@@ -40,20 +38,13 @@ const Exclusive = () => {
               />
               <div className="card-body">
                 <h5 className="card-title">{title}</h5>
-                <span className="card-text text-success">${price}</span>
+                <span className="card-text text-success fw-bold">${price}</span>
                 &nbsp;
                 <span className="card-text">
                   <s>${price + 100}</s>
                 </span>
                 <br />
-                <FontAwesomeIcon className="text-warning" icon={faStar} />
-                <FontAwesomeIcon className="text-warning" icon={faStar} />
-                <FontAwesomeIcon className="text-warning" icon={faStar} />
-                <FontAwesomeIcon
-                  className="text-warning"
-                  icon={faStarHalfStroke}
-                />
-                <span>({rating.rate})</span>
+                <Stars stars={rating?.rate} reviews={rating?.count} />
               </div>
             </div>
           </div>
@@ -63,10 +54,10 @@ const Exclusive = () => {
   return (
     <>
       <div className="row exclusive mx-auto">
-        <div className="col-12 text-center mt-5">
+        <div className="col-12 text-center ">
           <p className="fs-2 fw-bold">Exclusive product</p>
         </div>
-        <div className="col-12 lising ">
+        {/* <div className="col-12 lising ">
           <nav className="navbar navbar-expand-lg ">
             <div className="container-sm-fluid mx-auto">
               <ul className="navbar-nav listgroup">
@@ -93,6 +84,12 @@ const Exclusive = () => {
               </ul>
             </div>
           </nav>
+        </div> */}
+        <div className="col-12">
+          <p className="fs-5 text-center text-secondary">
+            All Things Are Possible With Coffee And A Cute{" "}
+            <span className="text-danger">OUTFIT</span>.
+          </p>
         </div>
         <div className="col-12">
           <div className="row mx-auto exe">{filterDetails}</div>

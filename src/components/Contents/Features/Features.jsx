@@ -2,11 +2,12 @@ import React from "react";
 import "./Features.scss";
 import feature1 from "../../../assets/images/feat1.png";
 import feature2 from "../../../assets/images/feat2.png";
+import { Link } from "react-router-dom";
 
 const Features = () => {
   return (
     <>
-      <div className="row my-5 mx-5 mx-sm-2 features">
+      <div className="row  mx-5 mx-sm-2 features">
         <div className="col-md-6 mb-sm-3 mb-3 mb-sm-0 ">
           <div className="card feature1">
             <div className="row">
@@ -21,7 +22,9 @@ const Features = () => {
                 <div className="card-body align">
                   <h5 className="card-title text-danger">Super Sale</h5>
                   <p className="card-text fw-bold fs-4">New Collection</p>
-                  <p className="card-text text-secondary shopNow">Shop Now</p>
+                  <Link to={"/cloths"} className="shopping">
+                    <p className="card-text text-secondary shopNow">Shop Now</p>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -42,7 +45,9 @@ const Features = () => {
                 <div className="card-body align">
                   <h5 className="card-title text-danger">Special offer</h5>
                   <p className="card-title fw-bold fs-4">New Collection</p>
-                  <p className="card-text text-secondary shopNow">Shop Now</p>
+                  <Link to={"/cloths"} className="shopping">
+                    <p className="card-text text-secondary shopNow">Shop Now</p>
+                  </Link>
                 </div>
               </div>
             </div>

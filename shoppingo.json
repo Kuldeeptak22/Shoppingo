@@ -1,0 +1,35 @@
+{
+    "homepage": {},
+    "shop": {
+        "filtersOthers": [
+            {
+                "id": 1,
+                "name": "all"
+            },
+            {
+                "id": 2,
+                "name": "fragrances"
+            },
+            {
+                "id": 3,
+                "name": "groceries"
+            },
+            {
+                "id": 4,
+                "name": "home-decoration"
+            },
+            {
+                "id": 5,
+                "name": "skincare"
+            },
+            {
+                "id": 6,
+                "name": "laptops"
+            },
+            {
+                "id": 7,
+                "name": "smartphones"
+            }
+        ]
+    }
+}
